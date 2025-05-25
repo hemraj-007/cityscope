@@ -69,10 +69,6 @@ Start the frontend:
 
 npm run dev
 
-## 📸 Screenshots
-
-*Add screenshots or GIFs here showcasing your app.*
-
 ## 💡 Future Enhancements
 
 - ✅ Profile pictures
@@ -83,4 +79,4 @@ npm run dev
 
 ## 👤 Author
 
-**Himraj Bhatia**
+**Hemraj Bhatia**
