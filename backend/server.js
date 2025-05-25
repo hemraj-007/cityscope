@@ -1,0 +1,34 @@
+require('dotenv').config();
+const express = require('express');
+const app = express();
+const { PrismaClient } = require('@prisma/client');
+const authRoutes = require('./routes/authRoutes');
+const postRoutes = require('./routes/postRoutes');
+const userRoutes = require('./routes/userRoutes');
+const cors = require('cors');
+const replyRoutes = require('./routes/replyRoutes');
+
+
+const prisma = new PrismaClient();
+
+app.use(cors({
+  origin: 'http://localhost:5174', // Frontend origin
+  credentials: true, // If using cookies (not needed for JWT)
+}));
+
+app.use(express.json());
+
+app.use('/api/auth', authRoutes);
+app.use('/api/posts', postRoutes);
+app.use('/api/users', userRoutes);
+app.use('/api/reply', replyRoutes);
+
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+// Handle Prisma disconnect on Ctrl+C
+process.on('SIGINT', async () => {
+  console.log('Disconnecting Prisma...');
+  await prisma.$disconnect();
+  process.exit(0);
+});
