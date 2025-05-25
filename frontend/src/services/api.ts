@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'https://cityscope.onrender.com';
+const API_BASE_URL = 'https://cityscope.onrender.com/api';
 //http://localhost:4000/api
 
 const api = axios.create({
