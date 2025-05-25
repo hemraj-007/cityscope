@@ -1,7 +1,8 @@
 # 🌆 Cityscope
 
-Cityscope is a community-driven platform where users can share updates, seek help, and stay connected with their local neighborhood. Built with the **MERN stack** (MongoDB, Express, React, Node.js), deployed on **Render** (backend) and **Vercel** (frontend).
+Cityscope is a community-driven platform where users can share updates, seek help, and stay connected with their local neighborhood. Built with **React, TypeScript, Node.js, Express, Prisma, and PostgreSQL**, and deployed on **Render** (backend) and **Vercel** (frontend).
 
+---
 ## 🌐 Live URLs
 
 - **Frontend (Vercel)**: [https://cityscope-xi.vercel.app](https://cityscope-xi.vercel.app)
