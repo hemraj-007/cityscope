@@ -11,9 +11,14 @@ const replyRoutes = require('./routes/replyRoutes');
 
 const prisma = new PrismaClient();
 
+const allowedOrigins = [
+  'http://localhost:5174', // Dev
+  'https://cityscope-xi.vercel.app' // Prod
+];
+
 app.use(cors({
-  origin: 'http://localhost:5174', // Frontend origin
-  credentials: true, // If using cookies (not needed for JWT)
+  origin: allowedOrigins,
+  credentials: true,
 }));
 
 app.use(express.json());
