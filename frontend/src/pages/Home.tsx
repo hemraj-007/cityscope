@@ -5,12 +5,12 @@ import { Sparkles, MapPin, MessagesSquare } from 'lucide-react';
 const Home = () => {
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const token = localStorage.getItem('token');
-    if (token) {
-      navigate('/feed');
-    }
-  }, [navigate]);
+  // useEffect(() => {
+  //   const token = localStorage.getItem('token');
+  //   if (token) {
+  //     navigate('/feed');
+  //   }
+  // }, [navigate]);
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-gray-100 to-gray-300 text-gray-800 p-6 relative overflow-hidden">

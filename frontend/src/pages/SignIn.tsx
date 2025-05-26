@@ -66,7 +66,7 @@ const SignIn = () => {
               loading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-gray-800'
             }`}
           >
-            {loading ? 'Logging in...' : 'Login'}
+            {loading ? 'Signing in...' : 'Sign In'}
           </button>
 
           <p className="text-sm text-center text-gray-600 mt-4">
